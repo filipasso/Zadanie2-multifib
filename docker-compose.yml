@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "filipasso/Zadanie2:fib-client"
+    image: "filipasso/Zadanie2-multifib:fib-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: "filipasso/Zadanie2:fib-server"
+    image: "filipasso/Zadanie2-multifib:fib-server"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "filipasso/Zadanie2:fib-worker"
+    image: "filipasso/Zadanie2-multifib:fib-worker"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "filipasso/Zadanie2:fib-router"
+    image: "filipasso/Zadanie2-multifib:fib-router"
     mem_limit: 128m
     hostname: nginx
     ports:
