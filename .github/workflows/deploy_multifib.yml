@@ -13,16 +13,16 @@ jobs:
         include:
           - dockerfile: ./Dockerfile
             context: client
-            image: spg51/lab:fib-client
+            image: filipasso/Zadanie2-multifib:fib-client
           - dockerfile: ./Dockerfile
             context: server
-            image: spg51/lab:fib-server
+            image: filipasso/Zadanie2-multifib:fib-server
           - dockerfile: ./Dockerfile
             context: worker
-            image: spg51/lab:fib-worker
+            image: filipasso/Zadanie2-multifib:fib-worker
           - dockerfile: ./Dockerfile
             context: nginx
-            image: spg51/lab:fib-router  
+            image: filipasso/Zadanie2-multifib:fib-router  
     
     steps:
 
@@ -65,6 +65,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: multifib
         environment_name: Multifib-env
-        version_label: lab12
+        version_label: Zadanie2
         region: us-east-1
         deployment_package: deploy.zip
