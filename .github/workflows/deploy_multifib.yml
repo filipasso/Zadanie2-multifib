@@ -13,16 +13,16 @@ jobs:
         include:
           - dockerfile: ./Dockerfile
             context: client
-            image: filipasso/Zadanie2-multifib:fib-client
+            image: filipasso/zadanie2-multifib:fib-client
           - dockerfile: ./Dockerfile
             context: server
-            image: filipasso/Zadanie2-multifib:fib-server
+            image: filipasso/zadanie2-multifib:fib-server
           - dockerfile: ./Dockerfile
             context: worker
-            image: filipasso/Zadanie2-multifib:fib-worker
+            image: filipasso/zadanie2-multifib:fib-worker
           - dockerfile: ./Dockerfile
             context: nginx
-            image: filipasso/Zadanie2-multifib:fib-router  
+            image: filipasso/zadanie2-multifib:fib-router  
     
     steps:
 
